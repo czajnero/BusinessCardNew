@@ -6,6 +6,12 @@
 
 :root {
     --main-color:rgb(0, 0, 0);
+    --secondary-color: rgb(222, 222, 222);
+}
+
+body {
+    animation: fadeIn 1s forwards;
+    font-family: "Exo 2";
 }
 
 .top-container {
@@ -17,7 +23,6 @@
     font-family: "Neuton";
     letter-spacing: 0.2rem;
     color: var(--main-color);
-    //background-color: rgb(168, 160, 160);
 }
 
 .logo {
@@ -36,7 +41,7 @@
 }
 .logo-img h3 {
     position: absolute;
-    left: 55px;
+    left: 60px;
     top: -5px;
     max-width: 8vh;
     padding: 10px;
@@ -45,7 +50,7 @@
 .menu-links {
     display: flex;
     justify-content: space-around;
-    width: 33%;
+    width: 37%;
     list-style: none;
     font-size: 1.1rem;
     font-weight: 600;
@@ -69,7 +74,7 @@
     top: 100%;
     width: 0;
     height: 1px;
-    background-color: black;
+    background-color: var(--main-color);
     transition: width .3s ease-in-out;
   }
 
@@ -89,33 +94,29 @@
     transition: all 0.3s ease;
 }
 
-.container {
-    /* display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center; */
-    background: gray;
-}
-
 .top-section {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   grid-gap: 10px;
-   height: 100px;
+   background: url('../img/top-img2.jpg');
+   min-height: 600px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover; 
+   box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+   color: var(--secondary-color);
+   padding: 4rem;
 }
 
-.left-box {
-    /* display: grid;
-    grid-auto-columns: 1fr 1fr; */
-    text-align: center;
-    background: red;
+.top-section h3 {
+    font-size: 3rem;
 }
-.right-box {
-    /* display: grid;
-    grid-auto-columns: 1fr 1fr; */
-    text-align: center;
-    background: yellow;
+
+.top-section h3 b {
+    color: rgb(255, 255, 255);
 }
+
+.top-section p {
+    font-size: 1.2rem;
+}
+
 
 @media screen and (max-width:1200px) {
     .menu-links {
@@ -142,8 +143,8 @@
         position: absolute;
         right: 0;
         height: 92vh;
-        top: 8vh;
-        background-color: #5D0000;
+        top: 50px;
+        background-color: white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -203,5 +204,14 @@
 @keyframes overlineMenu {
     to {
         text-decoration: overline;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
