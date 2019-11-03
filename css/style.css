@@ -1,12 +1,92 @@
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-.menu {
-    border: 1px solid black;
-    background-color: #555555;
-    height: 40px;
+:root {
+    --main-color:rgb(0, 0, 0);
+}
+
+.top-container {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: 50px;
+    font-family: "Neuton";
+    letter-spacing: 0.2rem;
+    color: var(--main-color);
+    //background-color: rgb(168, 160, 160);
+}
+
+.logo {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.logo-img img {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    max-width: 60px;
+    padding: 10px;
+    margin: 0px;
+}
+.logo-img h3 {
+    position: absolute;
+    left: 55px;
+    top: -5px;
+    max-width: 8vh;
+    padding: 10px;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: space-around;
+    width: 33%;
+    list-style: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.menu-links a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.menu-links li {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.menu-links li:after {
+    content: "";
+    position: absolute;
+    left:0;
+    top: 100%;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: width .3s ease-in-out;
+  }
+
+.menu-links li:hover:after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin: 5px;
+    transition: all 0.3s ease;
 }
 
 .container {
@@ -35,4 +115,93 @@
     grid-auto-columns: 1fr 1fr; */
     text-align: center;
     background: yellow;
+}
+
+@media screen and (max-width:1200px) {
+    .menu-links {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .menu-links {
+        width: 55%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .logo-font {
+        animation: fadeLogoFont 1s ease-in-out forwards;
+    }
+
+    .menu-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: #5D0000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+
+    }
+
+    .menu-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+}
+
+.menu-active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@keyframes menuLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX:(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadeLogoFont {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes overlineMenu {
+    to {
+        text-decoration: overline;
+    }
 }
