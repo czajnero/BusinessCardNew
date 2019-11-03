@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    border: 1px solid black;
+    background-color: #555555;
+    height: 40px;
+}
+
+.container {
+    /* display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center; */
+    background: gray;
+}
+
+.top-section {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 10px;
+   height: 100px;
+}
+
+.left-box {
+    /* display: grid;
+    grid-auto-columns: 1fr 1fr; */
+    text-align: center;
+    background: red;
+}
+.right-box {
+    /* display: grid;
+    grid-auto-columns: 1fr 1fr; */
+    text-align: center;
+    background: yellow;
+}
