@@ -14,6 +14,8 @@ body {
     font-family: "Exo 2";
 }
 
+/* TOP SECTION (MENU, TOP IMG) */
+
 .top-container {
     display: flex;
     align-content: center;
@@ -118,6 +120,113 @@ body {
     font-size: 1.2rem;
 }
 
+/* MAIN SECTION */
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+
+    font-size: 2rem;
+
+    /* background: linear-gradient(black,white 15%); */
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 30px;
+    padding: 0 30px;
+    font-size: 1.2rem;
+}
+
+.left-box-main {
+    /* border: 1px solid black; */
+    padding: 40px;
+}
+
+.left-box-main ul {
+    list-style: none;
+}
+
+.left-box-main-li {
+    color: #802d2d;
+    font-weight: 600;
+}
+
+.right-box-main {
+    display: flex;
+    padding: 40px;
+
+    border-left: 2px solid black;
+    padding-left: 30px;
+}
+
+
+/* SKILLS SECTION */
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    justify-items: center;
+
+    font-size: 1.2rem;
+}
+
+.left-box-skills {
+    /* border: 1px solid black; */
+    padding: 40px;
+}
+
+.left-box-skills ul {
+    list-style: none;
+}
+
+.right-box-skills {
+    padding: 40px;
+}
+
+.right-box-skills ul {
+    list-style: none;
+}
+
+.box {
+    border: 1px solid black;
+    border-radius: 4rem;
+}
+
+/* PROJECTS SECTION */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+
+    padding: 3rem;
+}
+
+/* CONTACT SECTION*/
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    
+    padding: 2rem;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    top
+}
+
+/* RWD & ANIMATIONS */
 
 @media screen and (max-width:1200px) {
     .menu-links {
@@ -140,11 +249,15 @@ body {
         animation: fadeLogoFont 1s ease-in-out forwards;
     }
 
+    .burger {
+        position: fixed;
+    }
+
     .menu-links {
-        position: absolute;
+        position: fixed;
         right: 0;
-        height: 92vh;
-        top: 50px;
+        height: 100vh;
+        top: 0px;
         background-color: white;
         display: flex;
         flex-direction: column;
@@ -152,7 +265,7 @@ body {
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
-
+        /* opacity: 0.95; */
     }
 
     .menu-links li {
@@ -185,7 +298,7 @@ body {
 @keyframes menuLinkFade {
     from {
         opacity: 0;
-        transform: translateX:(50px);
+        transform: translateX(50px);
     }
     to {
         opacity: 1;
