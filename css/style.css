@@ -147,7 +147,6 @@ body {
     font-size: 1.2rem;
     background-color: var(--secondary-color);
     box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.5);
-    //opacity: 0.7;
 }
 
 
@@ -194,7 +193,6 @@ body {
     font-size: 1.2rem;
     background-color: var(--secondary-color);
     box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.5);
-    //opacity: 0.7;
     line-height: 1.5em;
 }
 
@@ -271,7 +269,6 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2em;
-    padding: 3rem;
     margin: 0 3em;
     font-size: 1.2rem;
 }
@@ -288,18 +285,50 @@ body {
 
 .contact {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr; 
+    padding: 2em;
+    margin: 0 3em 2em;
+    border-radius: 0.7em;
+    font-size: 1.2rem;
+    background-color: var(--secondary-color);
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.5);
+}
+
+.right-box-contact {
+    border-left: 1px solid black;
+    padding-left: 2em;
     justify-items: center;
-    
-    padding: 2rem;
+}
+
+.input {
+    font-size: 1.2rem;
+    width: 100%;
+    border-radius: 0.5em;
+    background-color: #efefef;
+    border: 2px solid #8a8989;
+    padding: 0.2em;
+    margin: 0.2em;
+}
+
+.input:hover {
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.5);
+}
+
+#send {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    font-weight: 600;
 }
 
 /* FOOTER */
 
 .footer {
     display: flex;
+    margin: 1em 3em 1em;
+    font-size: 1.2rem;
     justify-content: center;
-    border: 1px solid black;
 }
 
 /* RWD & ANIMATIONS */
@@ -314,12 +343,54 @@ body {
     .menu-links {
         width: 55%;
     }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .right-box-skills {
+        font-size: 1.6rem;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width:768px) {
     body {
         overflow-x: hidden;
     }
+
+    .main {
+        display:grid;
+        min-width: 485px;
+    }
+    
+    .left-box-main {
+        font-size: 0.9rem;
+    }
+
+    .projects {
+        grid-template-columns: 0.9fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+    .main {
+        display: flex;
+    }
+
+     .skill-container-left {
+        font-size: 1rem;
+        grid-template-columns: 120px minmax(270px, 2fr);
+    }
+
+    .right-box-skills {
+        font-size: 1.2rem;
+        padding: 30px;
+        min-width: 100px;
+    } 
 
     .logo-font {
         animation: fadeLogoFont 1s ease-in-out forwards;
@@ -351,6 +422,18 @@ body {
         display: block;
         cursor: pointer;
         margin-right: 10px;
+    }
+}
+@media screen and (max-width:768px) {
+
+    .main {
+        display:grid;
+        min-width: 455px;
+    }
+
+    .skill-container-left {
+        font-size: 0.9rem;
+        grid-template-columns: 110px minmax(250px, 2fr);
     }
 }
 

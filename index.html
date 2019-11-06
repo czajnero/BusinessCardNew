@@ -20,10 +20,10 @@
             </div>
         </div>
         <ul class="menu-links">
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="burger">
                 <div class="line1"></div>
@@ -38,7 +38,7 @@
                 I am begginer front-end developer
             </p>
         </div>
-        <div class="title">
+        <div id="about" class="title">
             <h3>About Me</h3>
         </div>
         <div class="main">
@@ -51,13 +51,13 @@
                 </ul>
             </div>
             <div class="right-box-main">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti iste reiciendis officiis aliquam at ducimus velit.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
             </div>
         </div>
         <div class="title">
                 <h3>Skills</h3>
         </div>
-        <div class="skills">
+        <div id="skills" class="skills">
             <div class="left-box-skills box">
                 <h4 class="list-heading">Hard Skills</h4>
                 <br>
@@ -88,44 +88,57 @@
         <div class="title">
                 <h3>Projects</h3>
         </div>
-        <div class="projects">
+        <div id="projects" class="projects">
             <div class="column box">
                 <div class="content">
                     <img src="https://picsum.photos/599/400" alt="Mountains" style="width:100%">
                     <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>  
             </div>
             <div class="column box">
                 <div class="content">
                     <img src="https://picsum.photos/600/400" alt="Mountains" style="width:100%">
                     <h3>Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>  
             </div>
             <div class="column box">
                 <div class="content">
                     <img src="https://picsum.photos/601/400" alt="Mountains" style="width:100%">
                     <h3>Project 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>  
             </div>
             <div class="column box">
                 <div class="content">
                     <img src="https://picsum.photos/602/400" alt="Mountains" style="width:100%">
                     <h3>Project 4</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>  
             </div>
         </div>
         <div class="title">
                 <h3>Contact me</h3>
         </div>
-        <div class="contact">
+        <div id="contact" class="contact">
             <div class="left-box-contact">
-                Lorem, ipsum dolor.
+                <h4>Lorem, ipsum.</h4>
+                <br>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis consectetur fuga fugiat neque non! Quia, eius?</p>
             </div>
             <div class="right-box-contact">
-                Form
+                <h3>Let's start!</h3>
+                <form>
+                    <input class="input" type="text" placeholder="Name"> <br>
+                    <input class="input" type="text" placeholder="Your e-mail adress"><br>
+                    <input class="input" type="text" placeholder="Topic"><br>
+                    <textarea class="input" placeholder="Message" rows="6"></textarea><br>
+                    <input class="input" id="send" type="submit" value="Send">
+                </form>
             </div>
         </div>
-        <div class="footer">Meduza &copy;</div>
+        <div class="footer box">Meduza &copy;</div>
     </div>
 
     <script src="./js/script.js"></script>
