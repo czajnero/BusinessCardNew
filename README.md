@@ -9,16 +9,16 @@ Site: [CLICK](https://czajnero.github.io/BusinessCardNew/)
 > HTML
   - basic structure of site
 > CSS
-  - tyling elements
-  - WD design with flebox and grid, site changes structure upon changing width of window
+  - styling elements
+  - RWD design with flebox and grid, site changes structure upon changing width of window
   ![RWD2](img/readme2.png)
-  - nimation effects
+  - Animation effects
 > JavaScript
-  - imated burger menu
+  - animated burger menu
 
 **2. Sections**
 > About me 
-> kills
-> rojects
-> ontact 
+> Skills
+> Projects
+> Contact 
 
