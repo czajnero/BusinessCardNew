@@ -1,6 +1,6 @@
 # Business Card
 
-![Mobile screenshot](img/readme1.jpg)
+![RWD view](img/readme1.JPG)
 # Business Card
 
 Site: [CLICK](https://czajnero.github.io/BusinessCardNew/)
