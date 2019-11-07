@@ -18,7 +18,14 @@ Site: [CLICK](https://czajnero.github.io/BusinessCardNew/)
 
 **2. Sections**
 > About me 
+  - First section with personal data
+  - Second section with description of myself
 > Skills
+  - First section with hard skills
+  - Second section with soft skills
 > Projects
+  - Section with 4 projects
 > Contact 
+  - First section with description
+  - Second section with contact form
 
