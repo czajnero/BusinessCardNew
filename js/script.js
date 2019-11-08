@@ -2,7 +2,10 @@ const menuSlide = () => {
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('.menu-links');
     const menuLinks = document.querySelectorAll('.menu-links li');
-    
+    const menuLinksA = document.querySelector('.menu-links li a');
+    const menuLinksAA = document.querySelectorAll('.menu-links li a');
+
+
     burger.addEventListener('click', () => {
         menu.classList.toggle('menu-active');
 
@@ -15,7 +18,12 @@ const menuSlide = () => {
         });
         burger.classList.toggle('toggle');
     });
-    
+
+    menuLinksAA.forEach((link) => {
+        link.addEventListener('click', () => {
+            burger.click();
+        })
+    });
 }
 
 menuSlide();
